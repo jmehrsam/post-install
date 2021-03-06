@@ -20,6 +20,9 @@ sudo apt upgrade -y
 # Install OpenSSH
 sudo apt install openssh-server -y
 
+# Install qemu-guest-agent
+sudo apt install qemu-guest-agent -y
+
 # Enable firewall
 sudo ufw enable
 
