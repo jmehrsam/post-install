@@ -22,9 +22,14 @@ sudo apt install openssh-server -y
 
 # Install qemu-guest-agent
 sudo apt install qemu-guest-agent -y
+sudo systemctl start qemu-guest-agent
 
 # Enable firewall
 sudo ufw enable
+
+# Install xRDP
+sudo apt install xrdp
+sudo ufw allow from 192.168.1.0/24 to any port 3389
 
 # Disable root login
 echo "PermitRootLogin no" >> /etc/ssh/sshd_config
